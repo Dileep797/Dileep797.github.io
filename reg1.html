@@ -1,0 +1,78 @@
+<html>
+<head>
+</head>
+
+<body>
+<center>
+<h1 style="background:green;color:white; font-size:50px;">REGISTRATION FORM</h1>
+<form name='registration' method='post' action="./regt">
+<table height='450'>
+
+<tr >
+<td style="color:blue; font-size:25px;">Name:</td><td><input name="name" type="text" id="demo" size='15'></td>
+</tr>
+
+<tr>
+<td style="color:blue; font-size:25px;">Password:</td>
+<td><input type="text" name="pass" id="pass" size='15'>
+</td></tr>
+
+<tr>
+<td style="color:blue; font-size:25px;">Phone number:</td>
+<td><input type="text" name="ph_no" id="ph_no" size='15'>
+</td></tr>
+
+<tr>
+<td style="color:blue; font-size:25px;">Gender:</td>
+<td><input type="radio"  name="Gender value="male"  />male
+<input type="radio" name="Gender value="female"  />female</td>
+</tr>
+
+<tr>
+<td style="color:blue; font-size:25px;">Date Of Birth(D M Y):</td>
+<td><input type="date" name="dob"></td>
+</tr>
+
+<tr>
+<td style="color:blue; font-size:25px;">Languages You Know:</td>
+<td><input type="checkbox" name="english" value="english">English
+<input type="checkbox" name="hindi" value="hindi">Hindi
+<input type="checkbox" name="telugu" value="telugu">Telugu
+<input type="checkbox" name="tamil" value="tamil">Tamil
+</td>
+</tr>
+
+<tr>
+<td style="color:blue; font-size:25px;">Address:</td>
+<td><textarea rows='5' cols='30'></textarea></td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<input type="submit" style="background-color:green;color:white" value="submit" id="submit" align="center" onclick="validate();">
+</td></tr>
+
+</table>
+</center>
+</body>
+<script>
+function validate()
+{
+  
+  var x=document.getElementById("demo").value;
+  var re=/[A-za-z]+$/;
+  if(!re.test(x))
+  {
+   alert("invalid name!!!");
+  }
+  if(document.registration.pass.value.length<=6)
+ {
+   window.alert('password must be more than 8 characters');
+  }
+  if(document.registration.ph_no.value.length<10)
+  {
+   window.alert('Invalid phone number!!!');
+  }
+}
+</script>
+</html>

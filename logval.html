@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Login Page</title>
+</head>
+<body bgcolor=#DADED4>
+<h2 align='center'>LOGIN </h2>
+<form name='registration' method='post'>
+<table align="center" height='150'>
+
+<tr><td>USER-NAME:</td><td><input type="text" name="demo" id="demo" size='15'></td>
+</tr>
+<tr>
+<td>PASSWORD:</td><td><input type="text" name="pass" id="pass" size='15'></td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<input type="submit" value="login" id="submit" align="center" onmouseover="log();">
+<input type="reset" value="reset" align="center">
+</td></tr>
+
+</form>
+</table>
+</body>
+<script>
+function log()
+{
+  var x=document.getElementById("demo").value;
+  var re=/[a-z0-9]{6,18}/;
+  if(!re.test(x))
+  {
+   alert("invalid name!!!");
+  }
+  if(document.registration.pass.value.length<=6)
+ {
+   window.alert('password must be 8 characters');
+  }
+}
+</script>
+</html>
